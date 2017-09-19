@@ -64,3 +64,23 @@ void graph_create_undirectedGraph()
 	add_edge(u, x, g);
 	cout << "Degree of u: " << degree(u, g) << endl;
 }
+
+void graph_in_out_degree()
+{
+	typedef boost::adjacency_list<listS, vecS, directedS> mygraph;
+
+	mygraph g;
+	add_edge(0, 1, g);
+	add_edge(0, 3, g);
+	add_edge(1, 2, g);
+	add_edge(2, 3, g);
+	mygraph::vertex_iterator vertexIt, vertexEnd;
+	mygraph::in_edge_iterator inedgeIt, inedgeEnd;
+	mygraph::in_edge_iterator outedgeIt, outedgeEnd;
+	tie(vertexIt, vertexEnd) = vertices(g);
+	for (; vertexIt != vertexEnd; vertexIt++)
+	{
+		cout << "incoming edges for " << *vertexIt << ": ";
+		tie(inedgeIt, inedgeEnd) = in_edges(*vertexIt, g);
+	}
+}
