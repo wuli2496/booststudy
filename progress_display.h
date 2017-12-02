@@ -12,3 +12,4 @@ void test_progress_display()
 		++dis;
 	}
 }
+
