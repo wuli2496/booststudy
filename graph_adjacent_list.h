@@ -81,6 +81,6 @@ void graph_in_out_degree()
 	for (; vertexIt != vertexEnd; vertexIt++)
 	{
 		cout << "incoming edges for " << *vertexIt << ": ";
-		tie(inedgeIt, inedgeEnd) = in_edges(*vertexIt, g);
+		//tie(inedgeIt, inedgeEnd) = in_edges(*vertexIt, g);
 	}
 }

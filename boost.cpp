@@ -9,10 +9,11 @@
 #include "shared_ptr.h"
 #include "graph_adjacent_list.h"
 
+#include "thread.h"
+
 int main()
 {
-	graph_create_undirectedGraph();
-
+	testCopy();
     return 0;
 }
 
